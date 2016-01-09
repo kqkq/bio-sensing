@@ -1,0 +1,12 @@
+[submodule "ble-nrf51822"]
+	path = ble-nrf51822
+	url = https://github.com/ARMmbed/ble-nrf51822.git
+[submodule "ble"]
+	path = ble
+	url = https://github.com/ARMmbed/ble.git
+[submodule "nordic-sdk"]
+	path = nordic-sdk
+	url = git@github.com:kqkq/nordic-sdk.git
+[submodule "mbed"]
+	path = mbed
+	url = git@github.com:kqkq/mbed.git
