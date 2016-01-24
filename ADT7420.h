@@ -37,7 +37,7 @@ public:
 	ADT7420(PinName sda, PinName scl, I2CAddress addr = ADDRESS0, int freq = 100000);
 	bool isOK();
 	bool dataAvailable();
-	int readID();
+	int  getID();
 	void setResolution(Resolution resolution);
 	void setConvertMode(ConvertMode mode);
 	float temperature();
@@ -68,7 +68,7 @@ private:
 
     const uint8_t READY_BIT = (1 << 7);
     const uint8_t RESOL_BIT = (1 << 7);
-    const uint8_t MODE_BIT  = (3 << 6);
+    const uint8_t MODE_BIT  = (3 << 5);
 };
 
 #endif /* ADT7420_H_ */
