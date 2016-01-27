@@ -1,51 +1,82 @@
-/* mbed Microcontroller Library
- * Copyright (c) 2006-2015 ARM Limited
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *     http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 #include "mbed.h"
 #include "ble/BLE.h"
-#include "ble/services/HeartRateService.h"
-#include "ble/services/BatteryService.h"
-#include "ble/services/DeviceInformationService.h"
+#include "ble/services/HealthThermometerService.h"
+#include "ADT7420.h"
 
-DigitalOut led1(LED1);
+//BLE ble;
+Serial pc(TX_PIN_NUMBER, RX_PIN_NUMBER);
+ADT7420 tsensor(I2C_SDA0, I2C_SCL0, ADT7420::ADDRESS0, 100000);
+Ticker alertTimer;
+Ticker measureTimer;
 
-const static char     DEVICE_NAME[]        = "HRM1";
-static const uint16_t uuid16_list[]        = {GattService::UUID_HEART_RATE_SERVICE,
-                                              GattService::UUID_DEVICE_INFORMATION_SERVICE};
-static volatile bool  triggerSensorPolling = false;
+DigitalOut greenLED(p21, 0);
+DigitalOut redLED(p20, 0);
 
-uint8_t hrmCounter = 100; // init HRM to 100bps
 
-HeartRateService         *hrService;
-DeviceInformationService *deviceInfo;
+static bool shouldMeasure = true;
+static const char *DEVICE_NAME = "BNU_Biosen";
+static const uint16_t uuid16_list[] = {0x1802, GattService::UUID_HEALTH_THERMOMETER_SERVICE};
 
-void disconnectionCallback(const Gap::DisconnectionCallbackParams_t *params)
+uint8_t alertLevel;
+GattCharacteristic alert(GattCharacteristic::UUID_ALERT_LEVEL_CHAR,
+		&alertLevel,
+		1, 1,
+		GattCharacteristic::BLE_GATT_CHAR_PROPERTIES_WRITE_WITHOUT_RESPONSE);
+GattCharacteristic *characteristics[] = {&alert};
+GattService immediateAlertService(0x1802, characteristics,
+		sizeof(characteristics) / sizeof(GattCharacteristic *));
+
+HealthThermometerService *thermo;
+
+void tickAlertHandler()
 {
-    BLE::Instance(BLE::DEFAULT_INSTANCE).gap().startAdvertising(); // restart advertising
+	redLED = !redLED;
+	//greenLED = !greenLED;
 }
 
-int scopeLED = 1;
-void periodicCallback(void)
+void tickMeasureHandler()
 {
-	scopeLED = !scopeLED;
-    led1 = !led1; /* Do blinky on LED1 while we're waiting for BLE events */
+	shouldMeasure = true;
+}
 
-    /* Note that the periodicCallback() executes in interrupt context, so it is safer to do
-     * heavy-weight sensor polling from the main thread. */
-    triggerSensorPolling = true;
+void disconnectionCallback(const Gap::DisconnectionCallbackParams_t *)
+{
+    BLE::Instance(BLE::DEFAULT_INSTANCE).gap().startAdvertising();
+    greenLED = 0;
+}
+
+void connectionCallback(const Gap::ConnectionCallbackParams_t *)
+{
+	greenLED = 1;
+}
+
+void writeCharCallback(const GattWriteCallbackParams *params)
+{
+	GattAttribute::Handle_t ah = alert.getValueHandle();
+    /* Check to see what characteristic was written, by handle */
+    if(params->handle == ah) {
+        /* toggle LED if only 1 byte is written */
+        if(params->len == 1) {
+            if(params->data[0] == 1)
+            	alertTimer.attach(tickAlertHandler, 0.5);
+            if(params->data[0] == 2)
+            	alertTimer.attach(tickAlertHandler, 0.1);
+            if(params->data[0] == 0)
+            	alertTimer.detach();
+            //(params->data[0] == 0x00) ? printf("led on\n\r") : printf("led off\n\r"); // print led toggle
+        }
+        /* Print the data if more than 1 byte is written */
+
+            printf("Data received: length = %d, data = 0x",params->len);
+            for(int x=0; x < params->len; x++) {
+                printf("%x", params->data[x]);
+            }
+            printf("\n\r");
+
+
+        /* Update the readChar with the value of writeChar */
+        //BLE::Instance(BLE::DEFAULT_INSTANCE).gattServer().write(readChar.getValueHandle(), params->data, params->len);
+    }
 }
 
 void bleInitComplete(BLE::InitializationCompleteCallbackContext *params)
@@ -58,52 +89,46 @@ void bleInitComplete(BLE::InitializationCompleteCallbackContext *params)
     }
 
     ble.gap().onDisconnection(disconnectionCallback);
+    ble.gap().onConnection(connectionCallback);
+    ble.gattServer().onDataWritten(writeCharCallback);
 
-    /* Setup primary service. */
-    hrService = new HeartRateService(ble, hrmCounter, HeartRateService::LOCATION_FINGER);
+    /* Setup advertising */
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::BREDR_NOT_SUPPORTED | GapAdvertisingData::LE_GENERAL_DISCOVERABLE); // BLE only, no classic BT
+    ble.gap().setAdvertisingType(GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED); // advertising type
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LOCAL_NAME, (uint8_t *)DEVICE_NAME, sizeof(DEVICE_NAME)); // add name
+    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS, (uint8_t *)uuid16_list, sizeof(uuid16_list)); // UUID's broadcast in advertising packet
+    ble.gap().setAdvertisingInterval(100); // 100ms.
 
-    /* Setup auxiliary service. */
-    deviceInfo = new DeviceInformationService(ble, "ARM", "Model1", "SN1", "hw-rev1", "fw-rev1", "soft-rev1");
+    // Temperature sensor initialization
+    tsensor.setResolution(ADT7420::RES_16BIT);
+    tsensor.setConvertMode(ADT7420::MODE_1SPS);
+    measureTimer.attach(tickMeasureHandler, 1.0);
 
-    /* Setup advertising. */
-    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::BREDR_NOT_SUPPORTED | GapAdvertisingData::LE_GENERAL_DISCOVERABLE);
-    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LIST_16BIT_SERVICE_IDS, (uint8_t *)uuid16_list, sizeof(uuid16_list));
-    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::GENERIC_HEART_RATE_SENSOR);
-    ble.gap().accumulateAdvertisingPayload(GapAdvertisingData::COMPLETE_LOCAL_NAME, (uint8_t *)DEVICE_NAME, sizeof(DEVICE_NAME));
-    ble.gap().setAdvertisingType(GapAdvertisingParams::ADV_CONNECTABLE_UNDIRECTED);
-    ble.gap().setAdvertisingInterval(1000); /* 1000ms */
+    /* Add our custom service */
+    ble.addService(immediateAlertService);
+    thermo = new HealthThermometerService(ble, (float)tsensor, HealthThermometerService::LOCATION_BODY);
+
+    /* Start advertising */
     ble.gap().startAdvertising();
 }
 
 int main(void)
 {
-    led1 = 1;
-    Ticker ticker;
-    ticker.attach(periodicCallback, 1); // blink LED every second
+	pc.baud(115200);
 
-    BLE& ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
-    ble.init(bleInitComplete);
+	BLE& ble = BLE::Instance(BLE::DEFAULT_INSTANCE);
+	ble.init(bleInitComplete);
 
-    /* SpinWait for initialization to complete. This is necessary because the
-     * BLE object is used in the main loop below. */
-    while (ble.hasInitialized()  == false) { /* spin loop */ }
+    while (!ble.hasInitialized()) { /* spin loop */ }
 
-    // infinite loop
-    while (1) {
-        // check for trigger from periodicCallback()
-        if (triggerSensorPolling && ble.getGapState().connected) {
-            triggerSensorPolling = false;
-
-            // Do blocking calls or whatever is necessary for sensor polling.
-            // In our case, we simply update the HRM measurement.
-            hrmCounter++;
-            if (hrmCounter == 175) { //  100 <= HRM bps <=175
-                hrmCounter = 100;
-            }
-
-            hrService->updateHeartRate(hrmCounter);
-        } else {
-            ble.waitForEvent(); // low power wait for event
-        }
+    while (true) {
+    	if(shouldMeasure)
+    	{
+    		float t = tsensor;
+    		thermo->updateTemperature(t);
+    		printf("%x\n\r", *((int *)(&t)));
+    		shouldMeasure = false;
+    	}
+        ble.waitForEvent(); // allows or low power operation
     }
 }
