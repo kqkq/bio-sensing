@@ -3,7 +3,7 @@
 	url = https://github.com/ARMmbed/ble-nrf51822.git
 [submodule "ble"]
 	path = ble
-	url = https://github.com/ARMmbed/ble.git
+	url = git@github.com:kqkq/ble.git
 [submodule "nordic-sdk"]
 	path = nordic-sdk
 	url = git@github.com:kqkq/nordic-sdk.git
