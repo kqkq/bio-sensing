@@ -17,7 +17,7 @@
 				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812" name="Debug" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug">
 					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812." name="/" resourcePath="">
 						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug.1450517799" name="Cross ARM GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug">
-							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1177760054" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.none" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1177760054" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.optimize" valueType="enumerated"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.271231572" name="Message length (-fmessage-length=0)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.551073855" name="'char' is signed (-fsigned-char)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar" value="true" valueType="boolean"/>
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1652853400" name="Function sections (-ffunction-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections" value="true" valueType="boolean"/>
@@ -52,31 +52,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.1361676754" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.1986903910" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="NRF51"/>
@@ -89,31 +93,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.1248689258" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.1097915121" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="NRF51"/>
@@ -126,31 +134,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.871849837" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs.1108528673" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="NRF51"/>
@@ -176,6 +188,7 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.usenewlibnano.1727666861" name="Use newlib-nano (--specs=nano.specs)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.usenewlibnano" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostdlibs.250073478" name="No startup or default libs (-nostdlib)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.nostdlibs" value="false" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.useprintffloat.994273138" name="Use float with nano printf (-u _printf_float)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.useprintffloat" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.printgcsections.1958299819" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.printgcsections" value="false" valueType="boolean"/>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.input.1225444614" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
 									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
@@ -224,31 +237,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.1508433378" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.2122696470" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
 							</tool>
@@ -256,31 +273,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.2038826453" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.303050551" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
 							</tool>
@@ -288,31 +309,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.1368164758" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.1300763584" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input"/>
 							</tool>
@@ -321,6 +346,7 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.usenewlibnano.1342048456" name="Use newlib-nano (--specs=nano.specs)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.usenewlibnano" value="true" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.nostdlibs.37563400" name="No startup or default libs (-nostdlib)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.nostdlibs" value="false" valueType="boolean"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.useprintffloat.1910520476" name="Use float with nano printf (-u _printf_float)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.useprintffloat" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.printgcsections.1792996423" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.printgcsections" value="false" valueType="boolean"/>
 							</tool>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.658391869" name="Cross ARM C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.128430357"/>
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.1526745754" name="Cross ARM GNU Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.1751903677"/>
@@ -1754,6 +1780,55 @@
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.2078025632" name="Cross ARM GNU Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.169792087"/>
 						</toolChain>
 					</folderInfo>
+					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812.338846259" name="/" resourcePath="mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_TY51822R3">
+						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug.1079302952" name="Cross ARM GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug" unusedChildren="">
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1177760054.684272594.1927418949" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1177760054.684272594"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.271231572.1189353984.1256423800" name="Message length (-fmessage-length=0)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.271231572.1189353984"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.551073855.1227798133.131193626" name="'char' is signed (-fsigned-char)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.551073855.1227798133"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1652853400.1234509657.412379330" name="Function sections (-ffunction-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1652853400.1234509657"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.433609470.363935741.766333999" name="Data sections (-fdata-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.433609470.363935741"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.877686686.328514178.254749203" name="Debug level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.877686686.328514178"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.951676860.16711993.1348560889" name="Debug format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.951676860.16711993"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.954770631.1027684612.17669933" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.954770631.1027684612"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.1058319673.94834464.1978957345" name="Architecture" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.1058319673.94834464"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.2003841913.1583798003.738870364" name="ARM family" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.2003841913.1583798003"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.1638972806.235484037.1577080034" name="Instruction set" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.1638972806.235484037"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.2045337578.830489442.960535170" name="Prefix" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.2045337578.830489442"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.209648846.1693747804.223009326" name="C compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.209648846.1693747804"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.1710230938.655829333.1555019735" name="C++ compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.1710230938.655829333"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.939584154.682992263.204741235" name="Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.939584154.682992263"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.1589927657.1950332458.510036471" name="Hex/Bin converter" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.1589927657.1950332458"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.1563733959.1943414145.519559317" name="Listing generator" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.1563733959.1943414145"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.770406845.476799541.1643261004" name="Size command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.770406845.476799541"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.1364804568.1931656359.1236423327" name="Build command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.1364804568.1931656359"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.1418467255.710234717.649908443" name="Remove command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.1418467255.710234717"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1366849153.1535699560.1415708425" name="Create flash image" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1366849153.1535699560"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.48456217.197427869.1555926172" name="Print size" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.48456217.197427869"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1386225410" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.none" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.794348276" name="Message length (-fmessage-length=0)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.923591649" name="'char' is signed (-fsigned-char)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1345389523" name="Function sections (-ffunction-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.717547702" name="Data sections (-fdata-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.1508481998" name="Debug level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level" value="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.max" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.1435125664" name="Debug format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.446938325" name="Cross ARM GNU Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.1330543464">
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.1640676137" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1854041784" name="Cross ARM C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.314725459">
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.247560094" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.347089754" name="Cross ARM C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.1503882047">
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.2138349616" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.1771398565" name="Cross ARM C Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.1416206958"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.562959200" name="Cross ARM C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.658391869"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.1870541274" name="Cross ARM GNU Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.1526745754"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.1514022879" name="Cross ARM GNU Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.989111460"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.756447208" name="Cross ARM GNU Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.503144673"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.1164790892" name="Cross ARM GNU Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.169792087"/>
+						</toolChain>
+					</folderInfo>
 					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812.1002771787" name="/" resourcePath="mbed/libraries/mbed/targets/hal/TARGET_Freescale">
 						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug.985628834" name="Cross ARM GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug" unusedChildren="">
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1177760054.684272594.1601076012" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1177760054.684272594"/>
@@ -2538,6 +2613,7 @@
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.929784753" name="Cross ARM GNU Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.169792087"/>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812.57372625" name="system_nrf51.h" rcbsApplicability="disable" resourcePath="mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/system_nrf51.h" toolsToInvoke=""/>
 					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812.480636865" name="/" resourcePath="mbed/libraries/mbed/targets/cmsis/TARGET_Freescale">
 						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug.894952112" name="Cross ARM GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug" unusedChildren="">
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1177760054.684272594.1198130372" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1177760054.684272594"/>
@@ -2891,7 +2967,7 @@
 					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812.1257951510" name="apache-2.0.txt" rcbsApplicability="disable" resourcePath="ble-nrf51822/apache-2.0.txt" toolsToInvoke=""/>
 					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812.314337586" name="ButtonService.h" rcbsApplicability="disable" resourcePath="ButtonService.h" toolsToInvoke=""/>
 					<sourceEntries>
-						<entry excluding="ButtonService.h|ble-nrf51822/bootloader|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/s130_nrf51822_1_0_0|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/s110_nrf51822_8_0_0|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_DK|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_DELTA_DFCM_NNN40|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_HRM1017|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_ARCH_BLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_DONGLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_MICROBIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_MKIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_SBKIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_Y5_MBUG|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_RBLAB_BLENANO|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_RBLAB_NRF51822|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_SEEED_TINY_BLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_WALLBOT_BLE|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NRF51_16K_S110|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NRF51_16K_S130|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NORDIC_32K|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_IAR|mbed/libraries/mbed/targets/hal/TARGET_Freescale|mbed/libraries/mbed/targets/hal/TARGET_Atmel|mbed/libraries/mbed/targets/hal/TARGET_ARM_SSG|mbed/libraries/mbed/targets/hal/TARGET_Maxim|mbed/libraries/mbed/targets/hal/TARGET_NXP|mbed/libraries/mbed/targets/hal/TARGET_RENESAS|mbed/libraries/mbed/targets/hal/TARGET_Silicon_Labs|mbed/libraries/mbed/targets/hal/TARGET_STM|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_ARM_STD|mbed/libraries/mbed/targets/cmsis/TOOLCHAIN_GCC|mbed/libraries/mbed/targets/hal/TARGET_WIZNET|mbed/libraries/mbed/targets/cmsis/TARGET_WIZNET|mbed/libraries/mbed/targets/cmsis/TARGET_STM|mbed/libraries/mbed/targets/cmsis/TARGET_Silicon_Labs|mbed/libraries/mbed/targets/cmsis/TARGET_RENESAS|mbed/libraries/mbed/targets/cmsis/TARGET_NXP|mbed/libraries/mbed/targets/cmsis/TARGET_Maxim|mbed/libraries/mbed/targets/cmsis/TARGET_Freescale|mbed/libraries/mbed/targets/cmsis/TARGET_Atmel|mbed/libraries/mbed/targets/cmsis/TARGET_ARM_SSG|mbed/libraries/mbed/targets/cmsis/TOOLCHAIN_IAR|mbed/libraries/mbed/CMakeLists.txt|mbed/libraries/mbed/module.json|mbed/libraries/net|mbed/libraries/rpc|mbed/libraries/rtos|mbed/libraries/tests|mbed/libraries/USBDevice|mbed/libraries/USBHost|mbed/libraries/fs|mbed/libraries/dsp|mbed/libraries/doc|mbed/travis|mbed/workspace_tools|mbed/docs|startup" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/system_nrf51.c|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/system_nrf51.h|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_TY51822R3|ButtonService.h|ble-nrf51822/bootloader|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/s130_nrf51822_1_0_0|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/s110_nrf51822_8_0_0|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_DK|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_DELTA_DFCM_NNN40|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_HRM1017|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_ARCH_BLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_DONGLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_MICROBIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_MKIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_SBKIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_Y5_MBUG|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_RBLAB_BLENANO|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_RBLAB_NRF51822|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_SEEED_TINY_BLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_WALLBOT_BLE|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NRF51_16K_S110|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NRF51_16K_S130|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NORDIC_32K|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_IAR|mbed/libraries/mbed/targets/hal/TARGET_Freescale|mbed/libraries/mbed/targets/hal/TARGET_Atmel|mbed/libraries/mbed/targets/hal/TARGET_ARM_SSG|mbed/libraries/mbed/targets/hal/TARGET_Maxim|mbed/libraries/mbed/targets/hal/TARGET_NXP|mbed/libraries/mbed/targets/hal/TARGET_RENESAS|mbed/libraries/mbed/targets/hal/TARGET_Silicon_Labs|mbed/libraries/mbed/targets/hal/TARGET_STM|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_ARM_STD|mbed/libraries/mbed/targets/cmsis/TOOLCHAIN_GCC|mbed/libraries/mbed/targets/hal/TARGET_WIZNET|mbed/libraries/mbed/targets/cmsis/TARGET_WIZNET|mbed/libraries/mbed/targets/cmsis/TARGET_STM|mbed/libraries/mbed/targets/cmsis/TARGET_Silicon_Labs|mbed/libraries/mbed/targets/cmsis/TARGET_RENESAS|mbed/libraries/mbed/targets/cmsis/TARGET_NXP|mbed/libraries/mbed/targets/cmsis/TARGET_Maxim|mbed/libraries/mbed/targets/cmsis/TARGET_Freescale|mbed/libraries/mbed/targets/cmsis/TARGET_Atmel|mbed/libraries/mbed/targets/cmsis/TARGET_ARM_SSG|mbed/libraries/mbed/targets/cmsis/TOOLCHAIN_IAR|mbed/libraries/mbed/CMakeLists.txt|mbed/libraries/mbed/module.json|mbed/libraries/net|mbed/libraries/rpc|mbed/libraries/rtos|mbed/libraries/tests|mbed/libraries/USBDevice|mbed/libraries/USBHost|mbed/libraries/fs|mbed/libraries/dsp|mbed/libraries/doc|mbed/travis|mbed/workspace_tools|mbed/docs|startup" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -2945,31 +3021,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.725258780" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.1227958739" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="NRF51"/>
@@ -2982,31 +3062,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.94140017" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.1291777266" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="NRF51"/>
@@ -3019,31 +3103,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.2078147393" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs.294136573" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="NRF51"/>
@@ -3115,31 +3203,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.1565592703" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.1012366394" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
 							</tool>
@@ -3147,31 +3239,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.1947763663" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1481400948" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
 							</tool>
@@ -3179,31 +3275,35 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.1970623196" name="Include paths (-I)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/api&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/hal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/device&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_BIO_SENSING&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/scheduler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/nordic_sdk/components/libraries/crc16&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/btle/custom&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble-nrf51822/source/common&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/ble&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/util&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/s130/headers&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/softdevice/common/softdevice_handler&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_services/ble_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/common&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/device_manager/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/libraries/bootloader_dfu&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage/config&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/pstorage&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/drivers_nrf/ble_flash&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nordic-sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/util&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/s130/headers&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/softdevice/common/softdevice_handler&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu/hci_transport&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_services/ble_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/device_manager/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/bootloader_dfu&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage/config&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/pstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/drivers_nrf/ble_flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/ble_radio_notification&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/experimental_section_vars&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fstorage&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/fds&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/ble/peer_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/crc16&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${ProjDirPath}/nrf51-sdk/source/nordic_sdk/components/libraries/scheduler&quot;"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.942984385" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input"/>
 							</tool>
@@ -4597,6 +4697,55 @@
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.1133971987" name="Cross ARM GNU Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.1411040823"/>
 						</toolChain>
 					</folderInfo>
+					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783.39655894" name="/" resourcePath="mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_TY51822R3">
+						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release.676074552" name="Cross ARM GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release" unusedChildren="">
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.285382120.1218137121.840962689" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.285382120.1218137121"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.241058642.1237075158.175960439" name="Message length (-fmessage-length=0)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.241058642.1237075158"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.2026634949.605992769.257352033" name="'char' is signed (-fsigned-char)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.2026634949.605992769"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1660646190.581322442.236038572" name="Function sections (-ffunction-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1660646190.581322442"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.2002697145.796088109.1849347441" name="Data sections (-fdata-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.2002697145.796088109"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.1447816669.1057605009.2047158184" name="Debug level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.1447816669.1057605009"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.2110684928.1533219195.1999898479" name="Debug format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.2110684928.1533219195"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.403163113.1267883250.2141326743" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.403163113.1267883250"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.1333133612.305299554.1022896092" name="Architecture" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.1333133612.305299554"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.1848040293.266232569.210919699" name="ARM family" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.1848040293.266232569"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.1034584269.892399771.371117534" name="Instruction set" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.1034584269.892399771"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.713744127.1014925000.935167833" name="Prefix" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.713744127.1014925000"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.1595968964.684378076.1017167929" name="C compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.1595968964.684378076"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.1076527553.400199980.1138969315" name="C++ compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.1076527553.400199980"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.1091798334.716259889.2039820141" name="Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.1091798334.716259889"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.388024728.1513100183.1620725992" name="Hex/Bin converter" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.388024728.1513100183"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.2056994709.542625050.379486265" name="Listing generator" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.2056994709.542625050"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.1817704037.1486993005.936705602" name="Size command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.1817704037.1486993005"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.1970219434.1369152991.1825487526" name="Build command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.1970219434.1369152991"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.1395497871.2109424206.549967662" name="Remove command" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.1395497871.2109424206"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1353142656.1396816607.1441264202" name="Create flash image" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1353142656.1396816607"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.1371509251.75341557.1168559389" name="Print size" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.1371509251.75341557"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.2135311691" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.size" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.104371525" name="Message length (-fmessage-length=0)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.1076068012" name="'char' is signed (-fsigned-char)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.954552882" name="Function sections (-ffunction-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.1053490089" name="Data sections (-fdata-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.992359316" name="Debug level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.875194115" name="Debug format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.1014692681" name="Cross ARM GNU Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.421752852">
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.2028860583" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1571030565" name="Cross ARM C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.66512988">
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1723655306" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.1130343803" name="Cross ARM C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.1232318077">
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.1375468665" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.1426904310" name="Cross ARM C Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.263798221"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.1212421173" name="Cross ARM C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.810244670"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.1384329562" name="Cross ARM GNU Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.1743902974"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.188325256" name="Cross ARM GNU Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.1800678808"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.1180049804" name="Cross ARM GNU Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.1986696000"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.1670350358" name="Cross ARM GNU Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.1411040823"/>
+						</toolChain>
+					</folderInfo>
 					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783.81681397" name="/" resourcePath="mbed/libraries/mbed/targets/hal/TARGET_Freescale">
 						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release.659631639" name="Cross ARM GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release" unusedChildren="">
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.285382120.1218137121.1870698870" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.285382120.1218137121"/>
@@ -5332,6 +5481,7 @@
 							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.1060621661" name="Cross ARM GNU Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.1411040823"/>
 						</toolChain>
 					</folderInfo>
+					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783.1023030524" name="system_nrf51.h" rcbsApplicability="disable" resourcePath="mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/system_nrf51.h" toolsToInvoke=""/>
 					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783.842365950" name="/" resourcePath="mbed/libraries/mbed/targets/cmsis/TOOLCHAIN_GCC">
 						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release.590753856" name="Cross ARM GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release" unusedChildren="">
 							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.285382120.1218137121.835377645" name="Optimization Level" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.285382120.1218137121"/>
@@ -5684,7 +5834,7 @@
 					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783.1265721372" name="LICENSE" rcbsApplicability="disable" resourcePath="ble-nrf51822/LICENSE" toolsToInvoke=""/>
 					<fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783.1004734419" name="apache-2.0.txt" rcbsApplicability="disable" resourcePath="ble-nrf51822/apache-2.0.txt" toolsToInvoke=""/>
 					<sourceEntries>
-						<entry excluding="ble-nrf51822/bootloader|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_WALLBOT_BLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_SEEED_TINY_BLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_RBLAB_NRF51822|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_RBLAB_BLENANO|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_Y5_MBUG|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_SBKIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_MKIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_MICROBIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_DONGLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_DK|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_HRM1017|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_DELTA_DFCM_NNN40|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_ARCH_BLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/s130_nrf51822_1_0_0|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/s110_nrf51822_8_0_0|mbed/libraries/mbed/targets/hal/TARGET_WIZNET|mbed/libraries/mbed/targets/hal/TARGET_STM|mbed/libraries/mbed/targets/hal/TARGET_Silicon_Labs|mbed/libraries/mbed/targets/hal/TARGET_RENESAS|mbed/libraries/mbed/targets/hal/TARGET_NXP|mbed/libraries/mbed/targets/hal/TARGET_Maxim|mbed/libraries/mbed/targets/hal/TARGET_Freescale|mbed/libraries/mbed/targets/hal/TARGET_Atmel|mbed/libraries/mbed/targets/hal/TARGET_ARM_SSG|mbed/libraries/mbed/targets/cmsis/TOOLCHAIN_IAR|mbed/libraries/mbed/targets/cmsis/TOOLCHAIN_GCC|mbed/libraries/mbed/targets/cmsis/TARGET_WIZNET|mbed/libraries/mbed/targets/cmsis/TARGET_STM|mbed/libraries/mbed/targets/cmsis/TARGET_Silicon_Labs|mbed/libraries/mbed/targets/cmsis/TARGET_RENESAS|mbed/libraries/mbed/targets/cmsis/TARGET_NXP|mbed/libraries/mbed/targets/cmsis/TARGET_Maxim|mbed/libraries/mbed/targets/cmsis/TARGET_Freescale|mbed/libraries/mbed/targets/cmsis/TARGET_Atmel|mbed/libraries/mbed/targets/cmsis/TARGET_ARM_SSG|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_IAR|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_ARM_STD|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NRF51_16K_S130|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NRF51_16K_S110|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NORDIC_32K|mbed/libraries/mbed/CMakeLists.txt|mbed/libraries/mbed/module.json|mbed/libraries/USBHost|mbed/libraries/USBDevice|mbed/libraries/tests|mbed/libraries/rtos|mbed/libraries/rpc|mbed/libraries/net|mbed/libraries/fs|mbed/libraries/dsp|mbed/libraries/doc|mbed/requirements.txt|mbed/docs|mbed/travis|mbed/workspace_tools" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+						<entry excluding="mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/system_nrf51.c|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/system_nrf51.h|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_TY51822R3|ble-nrf51822/bootloader|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_WALLBOT_BLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_SEEED_TINY_BLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_RBLAB_NRF51822|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_RBLAB_BLENANO|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_Y5_MBUG|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_SBKIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51822_MKIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_MICROBIT|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_DONGLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_NRF51_DK|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_HRM1017|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_DELTA_DFCM_NNN40|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/TARGET_ARCH_BLE|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/s130_nrf51822_1_0_0|mbed/libraries/mbed/targets/hal/TARGET_NORDIC/TARGET_MCU_NRF51822/Lib/s110_nrf51822_8_0_0|mbed/libraries/mbed/targets/hal/TARGET_WIZNET|mbed/libraries/mbed/targets/hal/TARGET_STM|mbed/libraries/mbed/targets/hal/TARGET_Silicon_Labs|mbed/libraries/mbed/targets/hal/TARGET_RENESAS|mbed/libraries/mbed/targets/hal/TARGET_NXP|mbed/libraries/mbed/targets/hal/TARGET_Maxim|mbed/libraries/mbed/targets/hal/TARGET_Freescale|mbed/libraries/mbed/targets/hal/TARGET_Atmel|mbed/libraries/mbed/targets/hal/TARGET_ARM_SSG|mbed/libraries/mbed/targets/cmsis/TOOLCHAIN_IAR|mbed/libraries/mbed/targets/cmsis/TOOLCHAIN_GCC|mbed/libraries/mbed/targets/cmsis/TARGET_WIZNET|mbed/libraries/mbed/targets/cmsis/TARGET_STM|mbed/libraries/mbed/targets/cmsis/TARGET_Silicon_Labs|mbed/libraries/mbed/targets/cmsis/TARGET_RENESAS|mbed/libraries/mbed/targets/cmsis/TARGET_NXP|mbed/libraries/mbed/targets/cmsis/TARGET_Maxim|mbed/libraries/mbed/targets/cmsis/TARGET_Freescale|mbed/libraries/mbed/targets/cmsis/TARGET_Atmel|mbed/libraries/mbed/targets/cmsis/TARGET_ARM_SSG|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_IAR|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_ARM_STD|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NRF51_16K_S130|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NRF51_16K_S110|mbed/libraries/mbed/targets/cmsis/TARGET_NORDIC/TARGET_MCU_NRF51822/TOOLCHAIN_GCC_ARM/TARGET_MCU_NORDIC_32K|mbed/libraries/mbed/CMakeLists.txt|mbed/libraries/mbed/module.json|mbed/libraries/USBHost|mbed/libraries/USBDevice|mbed/libraries/tests|mbed/libraries/rtos|mbed/libraries/rpc|mbed/libraries/net|mbed/libraries/fs|mbed/libraries/dsp|mbed/libraries/doc|mbed/requirements.txt|mbed/docs|mbed/travis|mbed/workspace_tools" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -5699,24 +5849,22 @@
 		<configuration configurationName="Debug"/>
 		<configuration configurationName="Release"/>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+		<buildTargets/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.799774687;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.799774687.;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.134496205;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.1220394099">
+		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783.;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.2091917870;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.880820998">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1136750622;ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1136750622.;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.1457535150;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.583277373">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.799774687;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.799774687.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.892507470;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.169297980">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812;ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812.;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.1662388231;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.1946874769">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.922085402;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.585324001">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-		</scannerConfigBuildInfo>
-		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783.;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.2091917870;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.880820998">
+		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.799774687;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.799774687.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.892507470;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.169297980">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812;ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.586334812.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1278442217;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.336941652">
@@ -5725,9 +5873,11 @@
 		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1136750622;ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1136750622.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.2054626944;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1628933920">
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.982512783.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.922085402;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.585324001">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.799774687;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.799774687.;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.134496205;ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.1220394099">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
 	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
-		<buildTargets/>
-	</storageModule>
-	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>

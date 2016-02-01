@@ -7,3 +7,6 @@
 [submodule "mbed"]
 	path = mbed
 	url = git@github.com:kqkq/mbed.git
+[submodule "nrf51-sdk"]
+	path = nrf51-sdk
+	url = git@github.com:kqkq/nrf51-sdk.git
