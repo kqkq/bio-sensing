@@ -1,12 +1,12 @@
 [submodule "ble-nrf51822"]
 	path = ble-nrf51822
 	url = https://github.com/ARMmbed/ble-nrf51822.git
-[submodule "ble"]
-	path = ble
-	url = git@github.com:kqkq/ble.git
 [submodule "mbed"]
 	path = mbed
 	url = git@github.com:kqkq/mbed.git
 [submodule "nrf51-sdk"]
 	path = nrf51-sdk
 	url = git@github.com:kqkq/nrf51-sdk.git
+[submodule "ble"]
+	path = ble
+	url = git@github.com:kqkq/ble.git
