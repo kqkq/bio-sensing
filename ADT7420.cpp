@@ -1,7 +1,7 @@
 /*
  * ADT7420.cpp
  *
- *  Created on: 2016Äê1ÔÂ22ÈÕ
+ *  Created on: Jan. 22nd, 2016
  *      Author: KuangQi
  */
 

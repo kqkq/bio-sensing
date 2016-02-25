@@ -1,7 +1,7 @@
 /*
  * ADT7420.h
  *
- *  Created on: 2016Äê1ÔÂ22ÈÕ
+ *  Created on: Jan. 22nd, 2016
  *      Author: KuangQi
  */
 
@@ -45,7 +45,7 @@ public:
 #ifdef MBED_OPERATORS
     /** A shorthand for temperature()
      *
-     * @returns The current temperature measurement in ¡ãC.
+     * @returns The current temperature measurement in degree C.
      */
     operator float();
 #endif
