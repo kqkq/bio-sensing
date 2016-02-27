@@ -32,10 +32,14 @@ bool ADT7420::isOK()
 // Return true if there are new data available
 bool ADT7420::dataAvailable()
 {
+	int err = 0;
 	uint8_t ret = 0;
 	uint8_t reg = REG_STATUS;
-	MBED_ASSERT(0 == sensor.write(i2c_addr, (char*)(&reg), 1, true));
-	MBED_ASSERT(0 == sensor.read(i2c_addr, (char*)(&ret), 1, false));
+	do {
+		err = 0;
+		err |= sensor.write(i2c_addr, (char*)(&reg), 1, true);
+		err |= sensor.read(i2c_addr, (char*)(&ret), 1, false);
+	} while(err);
 	return (ret & READY_BIT) == 0;
 }
 
@@ -43,11 +47,15 @@ bool ADT7420::dataAvailable()
 // Should always return 0xCB
 int ADT7420::getID()
 {
+	int err = 0;
 	uint8_t ret = 0;
 	uint8_t reg = REG_ID;
 
-	MBED_ASSERT(0 == sensor.write(i2c_addr, (char*)(&reg), 1, true));
-	MBED_ASSERT(0 == sensor.read(i2c_addr, (char*)(&ret), 1, false));
+	do {
+		err = 0;
+		err |= sensor.write(i2c_addr, (char*)(&reg), 1, true);
+		err |= sensor.read(i2c_addr, (char*)(&ret), 1, false);
+	} while(err);
 	return ret;
 }
 
@@ -61,7 +69,7 @@ void ADT7420::setResolution(Resolution resolution)
 
 	res = resolution;
 
-	MBED_ASSERT(0 == sensor.write(i2c_addr, (char*)(&reg), 2));
+	while(sensor.write(i2c_addr, (char*)(&reg), 2));
 }
 
 void ADT7420::setConvertMode(ConvertMode mode)
@@ -72,17 +80,22 @@ void ADT7420::setConvertMode(ConvertMode mode)
 	reg_config |= (mode & MODE_BIT);
 	reg |= ((reg_config << 8) & 0xff00);
 
-	MBED_ASSERT(0 == sensor.write(i2c_addr, (char*)(&reg), 2));
+	while(sensor.write(i2c_addr, (char*)(&reg), 2));
 }
 
 float ADT7420::temperature()
 {
+	int err = 0;
 	uint16_t ret = 0;
 	uint16_t adc_code = 0;
 	uint8_t reg = REG_TEMPH;
 
-	MBED_ASSERT(0 == sensor.write(i2c_addr, (char*)(&reg), 1, true));
-	MBED_ASSERT(0 == sensor.read(i2c_addr, (char*)(&adc_code), 2, false));
+	do {
+		//if(err != 0) printf("ERR: %d! Retrying...\r\n", err);
+		err = 0;
+		err |= sensor.write(i2c_addr, (char*)(&reg), 1, true);
+		err |= sensor.read(i2c_addr, (char*)(&adc_code), 2, false);
+	} while(err);
 
 	//Little-Endian conversion
 	ret |= ((adc_code << 8) & 0xff00);
